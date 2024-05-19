@@ -6,7 +6,6 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   const email = "nikita.karpovs2004@inbox.lv";
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="text-dark text-center p-2 fixed-bottom">
@@ -18,7 +17,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-dark mx-3"
           >
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
           <a
             href="https://linkedin.com/in/nikitakarpovs"
@@ -26,12 +25,11 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-dark mx-3"
           >
-            <FontAwesomeIcon icon={faLinkedin} />
+            <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
           <a href={`mailto:${email}`} className="text-dark ms-3">
-            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon icon={faEnvelope} size="2x" />
           </a>
-          <p className="m-0">Copyright © {currentYear} Nikita Karpovs</p>
         </div>
       </div>
     </footer>
