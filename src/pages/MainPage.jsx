@@ -8,7 +8,7 @@ import ArodBiedribaImage from "../photo/arodbiedriba.jpg";
 import orbytlogoImage from "../photo/orbytlogo.png";
 
 function MainPage() {
-  const [activeSection, setActiveSection] = useState('work');
+  const [activeSection, setActiveSection] = useState('about');
 
   return (
     <>
@@ -35,7 +35,20 @@ function MainPage() {
             </div>
           </div>
           <div className="col-md-8">
-            {activeSection === 'work' ? (
+            {activeSection === 'about' && (
+              <>
+                <h2>About Me</h2>
+                <p>
+                  Motivated, hardworking and enthusiastic candidate with strong
+                  organizational skills, striving for progress.
+                </p>
+                <p>
+                  I am ready to help the team achieve the company's goals and use my
+                  knowledge.
+                </p>
+              </>
+            )}
+            {activeSection === 'work' && (
               <>
                 <h2>Work Experience</h2>
                 <br />
@@ -44,7 +57,7 @@ function MainPage() {
                     <a href="https://www.techgym.eu/frontpage-eng/" target="_blank" rel="noopener noreferrer">
                       <img
                         src={TechGymImage}
-                        alt="Profile"
+                        alt="TechGym"
                         className="img-fluid rounded mb-3"
                         style={{ width: '110px', height: '110px' }}
                       />
@@ -59,7 +72,7 @@ function MainPage() {
                     <a href="http://www.biedriem.lv/kontakti/itsa-kon/" target="_blank" rel="noopener noreferrer">
                       <img
                         src={ArodBiedribaImage}
-                        alt="Profile"
+                        alt="ArodBiedriba"
                         className="img-fluid rounded mb-3"
                         style={{ width: '110px', height: '110px' }}
                       />
@@ -74,7 +87,7 @@ function MainPage() {
                     <a href="https://orbyt.tech/" target="_blank" rel="noopener noreferrer">
                       <img
                         src={orbytlogoImage}
-                        alt="Profile"
+                        alt="Orbyt"
                         className="img-fluid rounded mb-3"
                         style={{ width: '2000px', height: '110px' }}
                       />
@@ -87,7 +100,8 @@ function MainPage() {
                   </div>
                 </div>
               </>
-            ) : (
+            )}
+            {activeSection === 'skills' && (
               <>
                 <h2>Skills</h2>
                 <div className="row">

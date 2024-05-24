@@ -6,10 +6,12 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   const email = "nikita.karpovs2004@inbox.lv";
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="text-dark text-center p-2 fixed-bottom">
-      <div className="container">
+    <footer className="bg-light text-dark p-2 fixed-bottom">
+      <div className="container d-flex justify-content-between align-items-center">
+        <p className="m-0">Copyright © {currentYear} Nikita Karpovs</p>
         <div>
           <a
             href="https://github.com/ImWeffi"
